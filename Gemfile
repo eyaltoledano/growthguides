@@ -40,4 +40,5 @@ gem 'spring',        group: :development
 
 gem 'twitter-bootstrap-rails'
 gem 'simple_form'
+gem 'devise'
 
