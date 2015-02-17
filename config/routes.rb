@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'blog/index'
+
   resources :guides
 
   devise_for :users
