@@ -1,3 +1,11 @@
+<% if current_user %>
+
+<div class="page-header text-center">
+  <h1><small>Logged in as <%= current_user.email %> <%= link_to "Not you?", destroy_user_session_path, method: :delete %> </small></h1>
+</div>
+
+<% else %>
+
 <div class="jumbotron">
 	<div class="text-center">
 		<h1>Welcome to GrowthGuides</h1>
@@ -6,3 +14,6 @@
 		<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
 	</div>
 </div>
+
+<% end %>
+
