@@ -30,6 +30,7 @@
 .nav-tabs > li.active > a:focus {
   border: none;
   border-radius: 0;
+  color: #8e44ad;
 }
 
 .nav-list { border-bottom: 1px solid #eee; }
@@ -37,12 +38,32 @@
   padding: 20px 15px 15px;
   border-left: 1px solid #eee; 
 }
+
+.nav-list > li:hover { 
+  padding: 20px 15px 15px;
+  border-left: 1px solid #eee;
+  background-color: #ecf0f1; 
+}
+
 .nav-list > li:last-child { border-right: 1px solid #eee; }
 .nav-list > li > a:hover { text-decoration: none; }
 .nav-list > li > a > span {
   display: block;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.nav-list > li > a > span {
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #34495e;
+}
+
+.nav-list > li > a > span:hover {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ecf0f1;
 }
 
 .mega-dropdown { position: static !important; }

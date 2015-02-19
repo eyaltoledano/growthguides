@@ -7,8 +7,8 @@
   */
 
  .btn-primary {
- 	background-color: #8e44ad;
- 	border-color: #8e44ad;
+ 	background-color: #f1c40f;
+ 	border-color: #f1c40f;
  }
 
  .btn-primary:hover {
@@ -17,6 +17,15 @@
  }
 
  .btn-primary:active {
- 	background-color: #9b59b6;
- 	border-color: #9b59b6;
+ 	background-color: #f1c40f;
+ 	border-color: #f1c40f;
+ }
+
+ .img-circle2 {
+ 	margin-left: 9px;
+ 	border-radius: 0;
+ }
+
+ .img-circle {
+ 	border-radius: 50%;
  }

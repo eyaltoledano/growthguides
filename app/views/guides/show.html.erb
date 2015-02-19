@@ -6,27 +6,35 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="box">
                 <div class="box-icon">
-                    <span class="fa fa-4x"><%= image_tag "eyal.jpeg", class: "img-responsive img-circle"  %></span>
+                    <span class="fa fa-4x"><%= image_tag "eyal.jpeg", class: "img-responsive img-circle2"  %></span>
                 </div>
                 <div class="info">
                     <h4 class="text-center"><%= @guide.name %></h4>
                     <h5 class="text-center">Authored by <%= @guide.author %></h5>
-                    <h5 class="text-center"><%= link_to "8 Reviews", "#" %></h5>
+                    <h5 class="text-center"><%= link_to "8 Reviews", "#", id: "reviews" %></h5>
                                         <p><%= @guide.description %></p>
                     
                     <br><br>
                     <div class="row" align="center">
+                      <div class="gig_submenu">
+                        <a onclick="show_message();" class="service_button2"><%= image_tag 'icon_message.png' %> Send Message</a>
+                        <a onclick="add_favorite();" class="service_button2" id="favorite"><%= image_tag 'icon_favorite.png' %> Add to Favorites</a>
+                        <a href="../gigs?seller=12955" class="service_button2"><%= image_tag 'icon_other.png' %> Geeks Other Gigs</a>
+                        <a href="https://www.linkedin.com/profile/view?id=144713849&amp;authType=name&amp;authToken=jswz&amp;trk=api*a3524843*s3596503*" target="_blank" class="service_button2"><%= image_tag 'icon_linkedin.png' %> LinkedIn Profile</a>
+                      </div>
+
                       <div class="col-md-4"></div>
                       <div class="col-md-4">
                         <% if @guide.availability = true %>
-                          <a href="#" class="btn btn-success btn-block">Buy Guide for $<%= @guide.price / 100 %></a>
+                          <a id="cta" href="#" class="btn btn-success btn-block">Buy Guide for $<%= @guide.price / 100 %></a>
                         <% else %>
-                         <a href="#" class="btn btn-danger btn-block" disabled="disabled">Guide Unavailable</a>
+                         <a id="cta" class="btn btn-danger btn-block" disabled="disabled">Guide Unavailable</a>
                         <% end %>
                                             
                         <br>
                       </div>
                   </div>
+
             </div>
         </div>
   </div>

@@ -1,6 +1,6 @@
 <div class="page-header" align="middle">
-  <%= link_to 'List a New Guide', new_guide_path, class: "pull-right btn btn-small btn-default", id: "new-guide" %>
-  <h1 class="text-center">Browse Growth Guides</h1>
+  <%= link_to 'List a New Guide', new_guide_path, class: "pull-right btn btn-small btn-primary", id: "new-guide" %>
+  <h1 id="browse-header" class="text-center">Browse Growth Guides</h1>
 </div>
 
 <br>
@@ -12,6 +12,8 @@
         <div class="right-inner-addon">
           <i class="icon-search"></i>
           <input type="search" class="form-control" placeholder="Search" />
+          <br>
+          <%= render 'menuleft' %>
         </div>
       </div>
     </div>
@@ -29,7 +31,7 @@
           </div>
           <div class="card_right">
             <span class="card_title"><%= link_to guide.name, guide %></span><br>
-            <span class="card_subtitle">4 Customer Reviews</span><br>
+            <span class="card_subtitle"><%= link_to "3 User Reviews", "#", id:"reviews" %></span><br>
             <div class="card_text">
               <%=h truncate(guide.description, :length => 160) %>           
              </div>
