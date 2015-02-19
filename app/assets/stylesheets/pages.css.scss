@@ -9,16 +9,35 @@ html,body {
   height:100%;
 }
 
+body {
+  background: #2a88c5  url(http://zmwlt.com/bucket/cz-20150128-what-color-2-bg.jpg) center center / 70%;
+  position: relative;
+}
+
 h1#main-header {
   font-family: 'Antic Slab', serif;
-  font-size:80px;
-  color:#DDCCEE;
+  font-size:60px;
+  color:#ecf0f1;
+}
+
+h2#main-header {
+  font-family: 'Antic Slab', serif;
+  color:#34495e;
 }
 
 .lead {
-	color:#DDCCEE;
+  font-family: 'Antic Slab', serif;
+	color:#ecf0f1;
 }
 
+svg{
+  max-width:320px;
+}
+
+#engine {
+  background-image: url("blockBG.png");
+  background-position: center top;
+}
 
 /* Custom container */
 .container-full {
@@ -37,5 +56,18 @@ h1#main-header {
 
 .v-center {
   margin-top:7%;
+}
+
+.white-text {
+  color: #ecf0f1
+}
+
+p {
+  color: #ecf0f1;
+}
+
+h3#home-lead {
+  font-family: 'Antic Slab', serif;
+  color:#e6e6e6;
 }
   

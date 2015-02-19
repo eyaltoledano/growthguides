@@ -1,29 +1,37 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
 
-<p>
-  <strong>Name:</strong>
-  <%= @guide.name %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Author:</strong>
-  <%= @guide.author %>
-</p>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="box">
+                <div class="box-icon">
+                    <span class="fa fa-4x"><%= image_tag "eyal.jpeg", class: "img-responsive img-circle"  %></span>
+                </div>
+                <div class="info">
+                    <h4 class="text-center"><%= @guide.name %></h4>
+                    <h5 class="text-center">Authored by <%= @guide.author %></h5>
+                    <h5 class="text-center"><%= link_to "8 Reviews", "#" %></h5>
+                                        <p><%= @guide.description %></p>
+                    
+                    <br><br>
+                    <div class="row" align="center">
+                      <div class="col-md-4"></div>
+                      <div class="col-md-4">
+                        <% if @guide.availability = true %>
+                          <a href="#" class="btn btn-success btn-block">Buy Guide for $<%= @guide.price / 100 %></a>
+                        <% else %>
+                         <a href="#" class="btn btn-danger btn-block" disabled="disabled">Guide Unavailable</a>
+                        <% end %>
+                                            
+                        <br>
+                      </div>
+                  </div>
+            </div>
+        </div>
+  </div>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @guide.description %>
-</p>
+<br>
 
-<p>
-  <strong>Price:</strong>
-  <%= @guide.price %>
-</p>
-
-<p>
-  <strong>Availability:</strong>
-  <%= @guide.availability %>
-</p>
-
-<%= link_to 'Edit', edit_guide_path(@guide) %> |
-<%= link_to 'Back', guides_path %>
+<%= link_to 'Edit', edit_guide_path(@guide) %> | <%= link_to 'Delete', @guide, method: :delete, data: { confirm: 'Are you sure?' } %> | <%= link_to 'Back', guides_path %>

@@ -1,3 +1,190 @@
 // Place all the styles related to the guides controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
+
+#guide-price {
+	margin-top: 15px;
+}
+
+#guide-title {
+	margin-top: 25px;
+}
+
+#guide-img {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#guide-author {
+	margin-top: -5px;
+}
+
+#guide-available {
+	color: #16a085
+}
+
+#guide-notavailable {
+	color: #c0392b
+}
+
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+
+div.box {
+	width: 100%;
+}
+
+.box {
+    border-radius: 3px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    padding: 18px 23px;
+    text-align: right;
+    display: block;
+    margin-top: 60px;
+}
+.box-icon {
+    background-color: #57a544;
+    border-radius: 50%;
+    display: table;
+    height: 100px;
+    margin: 0 auto;
+    width: 100px;
+    margin-top: -61px;
+}
+.box-icon span {
+    color: #fff;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.info h4 {
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.info > p {
+    color: #717171;
+    font-size: 16px;
+    padding-top: 10px;
+    text-align: justify;
+}
+.info > a {
+    background-color: #03a9f4;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    color: #fff;
+    transition: all 0.5s ease 0s;
+    margin-bottom: 60px;
+}
+.info > a:hover {
+    background-color: #0288d1;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+    color: #fff;
+    transition: all 0.5s ease 0s;
+}
+
+#guide-description {
+	height: 150px;
+	margin-bottom: relative;
+	overflow: hidden;
+  	text-overflow: ellipsis;
+}
+
+#new-guide-form {
+	max-width: 750px;
+}
+
+.card {
+	height: 160px;
+	width: 350px;
+	float: left;
+	margin-bottom: 72px;
+	margin-left: 85px;
+}
+
+.card_left {
+	width: 90px;
+	float: left;
+}
+
+.card_photo {
+	height: 66px;
+	width: 66px;
+	-webkit-border-radius: 33px;
+	-moz-border-radius: 33px;
+	border-radius: 33px;
+	margin-top: -6px;
+	margin-bottom: 30px;
+}
+
+.card_price_title {
+	font-size: 21px;
+	color: #2ecc71;
+	font-weight: 700;
+	line-height: 18px;
+	text-align: center;
+	width: 67px;
+}
+
+.card_price_subtitle {
+	font-size: 13px;
+	color: #E6E6E6;
+	font-weight: 700;
+	line-height: 13px;
+	text-align: center;
+	width: 67px;
+}
+
+.card_right {
+	width: 260px;
+	float: left;
+}
+
+.card_title {
+	font-size: 18px;
+	color: #3f484d;
+	font-weight: 600;
+	line-height: 15px;
+}
+
+.card_subtitle {
+	font-size: 17px;
+	color: #c8c8c8;
+	font-weight: 600;
+	line-height: 20px;
+}
+
+.card_text {
+	margin-top: 8px;
+	font-size: 17px;
+	color: #E6E6E6;
+	font-weight: 200;
+	line-height: 22px;
+	width: 280px;
+}
+
+#card_list {
+	min-height: 800px;
+}
+
+#side-search {
+	min-width: 220px;
+}
+
+.right-inner-addon {
+    position: relative;
+}
+.right-inner-addon input {
+    padding-right: 30px;    
+}
+.right-inner-addon i {
+    position: absolute;
+    right: 0px;
+    padding: 10px 12px;
+    pointer-events: none;
+}
+
+#new-guide {
+	margin-top: 5px;
+}

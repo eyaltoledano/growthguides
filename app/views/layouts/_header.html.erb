@@ -8,16 +8,64 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          </i><%= link_to " GrowthGuides", root_path, class: "navbar-brand mute" %>
+          </i><%= link_to "Hacker Guides", root_path, class: "navbar-brand mute", id: "brand" %>
         </div>
  
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           
+          <ul class="nav navbar-nav">
+        <li class="dropdown mega-dropdown active">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Browse Hacks <span class="caret"></span></a>       
+        <div class="dropdown-menu mega-dropdown-menu">
+                    <div class="container-fluid">
+                <!-- Tab panes -->
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="men">
+                            <ul class="nav-list list-inline">
+                                <li><a href="#"><%= image_tag 'acquisition.png' %><span>Acquisition</span></a></li>
+                                <li><a href="#"><%= image_tag 'activation.png' %><span>Activation</span></a></li>
+                                <li><a href="#"><%= image_tag 'retention.png' %><span>Retention</span></a></li>
+                                <li><a href="#"><%= image_tag 'referral.png' %><span>Referral</span></a></li>
+                                <li><a href="#"><%= image_tag 'revenue.png' %><span>Revenue</span></a></li>
+                            
+                            </ul>
+                          </div>
+                          <div class="tab-pane" id="women">
+                            <ul class="nav-list list-inline">
+                                <li><a href="#"><img src="http://content.nike.com/content/dam/one-nike/globalAssets/menu_header_images/OneNike_Global_Nav_Icons_Running.png"><span>Running</span></a></li>
+                                <li><a href="#"><img src="http://content.nike.com/content/dam/one-nike/globalAssets/menu_header_images/OneNike_Global_Nav_Icons_Basketball.png"><span>Basketball</span></a></li>
+                                <li><a href="#"><img src="http://content.nike.com/content/dam/one-nike/globalAssets/menu_header_images/OneNike_Global_Nav_Icons_Football.png"><span>Football</span></a></li>
+                                <li><a href="#"><img src="http://content.nike.com/content/dam/one-nike/globalAssets/menu_header_images/OneNike_Global_Nav_Icons_Soccer.png"><span>Soccer</span></a></li>                                
+                            </ul>
+                          </div>
+                          <div class="tab-pane" id="kids">
+                            <ul class="nav-list list-inline">
+                                <li><a href="#"><img src="http://content.nike.com/content/dam/one-nike/globalAssets/menu_header_images/OneNike_Global_Nav_Icons_Running.png"><span>Running</span></a></li>
+                                <li><a href="#"><img src="http://content.nike.com/content/dam/one-nike/globalAssets/menu_header_images/OneNike_Global_Nav_Icons_Basketball.png"><span>Basketball</span></a></li>
+                                <li><a href="#"><img src="http://content.nike.com/content/dam/one-nike/globalAssets/menu_header_images/OneNike_Global_Nav_Icons_Football.png"><span>Football</span></a></li>
+                                <li><a href="#"><img src="http://content.nike.com/content/dam/one-nike/globalAssets/menu_header_images/OneNike_Global_Nav_Icons_Soccer.png"><span>Soccer</span></a></li>
+                                <li><a href="#"><img src="http://content.nike.com/content/dam/one-nike/globalAssets/menu_header_images/OneNike_Global_Nav_Icons_MensTraining.png"><span>Men's Training</span></a></li>
+                                <li><a href="#"><img src="http://content.nike.com/content/dam/one-nike/globalAssets/menu_header_images/OneNike_Global_Nav_Icons_WomensTraining.png"><span>Women's Training</span></a></li>
+                            </ul>
+                          </div>
+                    
+                        </div>
+                    </div>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                       <li class="active"><a href="#men" role="tab" data-toggle="tab">Growth</a></li>
+                       <li><a href="#women" role="tab" data-toggle="tab">Product</a></li>
+                       <li><a href="#kids" role="tab" data-toggle="tab">Featured</a></li>
+                    </ul>                    
+        </div>        
+      </li>
+        </ul>
           
-          <ul class="nav navbar-nav navbar-right">
+          <ul id="header-nav-right" class="nav navbar-nav navbar-right">
+              <li><%= link_to "Sell Guides", new_guide_path %></li>
+              <li><%= link_to "Browse Guides", guides_path %></li>
               <li><%= link_to "Blog", blog_index_path %></li>
-              <li><%= link_to "Guides", guides_path %></li>
             <% if current_user %> 
               <li><%= link_to "Settings", edit_user_registration_path %></li>
               <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>

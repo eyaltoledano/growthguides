@@ -1,15 +1,16 @@
-<%= simple_form_for(@guide) do |f| %>
-  <%= f.error_notification %>
+<div class="row">
+  <div class="col-md-12" align="middle">
+    <%= simple_form_for(@guide, html: {class: "form-signin"}) do |f| %>
 
-  <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :author %>
-    <%= f.input :description %>
-    <%= f.input :price %>
-    <%= f.input :availability %>
-  </div>
+      <%= f.error_notification %>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+        <%= f.input :name, required: true, autofocus: true, label: false, placeholder: "Name your guide", input_html: { class: "form-control" } %>
+        <%= f.input :author, required: true, label: false, placeholder: "Author Name", input_html: {class: "form-control" } %>
+        <%= f.input :description, required: true, label: false, placeholder: "Provide a short description for your growth guide", input_html: { class: "form-control" } %>
+        <%= f.input :price, required: true, label: false, placeholder: "Price your Growth Guide", input_html: { class: "form-control" } %>
+ 
+        <%= f.button :submit, "Create Guide", class: "btn btn-primary btn-block" %>
+    <% end %>
   </div>
-<% end %>
+</div>
+

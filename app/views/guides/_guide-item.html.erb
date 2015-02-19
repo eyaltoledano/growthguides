@@ -1,0 +1,38 @@
+<div class="col-sm-3">
+    <div class="col-item">
+        <div class="photo">
+            <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
+        </div>
+        <div class="info">
+            <div class="row">
+                <div class="price col-md-6">
+                    <h5>
+                        <%= guide.name %></h5>
+                    <h5 class="price-text-color">
+                        $<%= guide.price / 100 %></h5>
+                </div>
+                <div class="rating hidden-sm col-md-6">
+                    <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                    </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                    </i><i class="fa fa-star"></i>
+                </div>
+            </div>
+            <div class="separator clear-left">
+                <p class="btn-add">
+                    <i class="fa fa-shopping-cart"></i><a href="#" class="hidden-sm">Buy Guide</a>
+                </p>
+                <p class="btn-details">
+                    <i class="fa fa-list"></i<%= link_to 'Details', guide %>
+                </p>
+                <p class="btn-details">
+                    <i class="fa fa-list"><%= link_to 'Destroy', guide, method: :delete, data: { confirm: 'Are you sure?' } %>
+                </p>
+                <p class="btn-details">
+                    <i class="fa fa-list"><%= link_to 'Edit', edit_guide_path(guide) %>
+                </p>
+            </div>
+            <div class="clearfix">
+            </div>
+        </div>
+    </div>
+</div>

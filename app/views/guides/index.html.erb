@@ -1,33 +1,46 @@
-<h1>Listing guides</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Author</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th>Availability</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @guides.each do |guide| %>
-      <tr>
-        <td><%= guide.name %></td>
-        <td><%= guide.author %></td>
-        <td><%= guide.description %></td>
-        <td><%= guide.price %></td>
-        <td><%= guide.availability %></td>
-        <td><%= link_to 'Show', guide %></td>
-        <td><%= link_to 'Edit', edit_guide_path(guide) %></td>
-        <td><%= link_to 'Destroy', guide, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="page-header" align="middle">
+  <%= link_to 'List a New Guide', new_guide_path, class: "pull-right btn btn-small btn-default", id: "new-guide" %>
+  <h1 class="text-center">Browse Growth Guides</h1>
+</div>
 
 <br>
 
-<%= link_to 'New Guide', new_guide_path %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+      <div id="side-search">
+        <div class="right-inner-addon">
+          <i class="icon-search"></i>
+          <input type="search" class="form-control" placeholder="Search" />
+        </div>
+      </div>
+    </div>
+
+    <div id="card_list" class="col-md-10">
+      <% @guides.each do |guide| %>
+      <div class="col-md-6">
+        <div class="card ">
+          <div class="card_left">
+            <img src="http://www.growthgeeks.com/images/profile/0_CHQ4Y4mEatCMI0bD225IYsaLmKFzdJ9D8utbYUO4l91L9g3SaanqrRE98gboEOc3_Ik6lpu2ghF_" class="card_photo">
+            <div class="card_price_title">$<%= guide.price / 100 %></div>
+            <div class="card_price_subtitle">Video</div>
+            <!--div class="card_price_title card_price_title_spacer">0</div>
+            <div class="card_price_subtitle">bought</div-->
+          </div>
+          <div class="card_right">
+            <span class="card_title"><%= link_to guide.name, guide %></span><br>
+            <span class="card_subtitle">4 Customer Reviews</span><br>
+            <div class="card_text">
+              <%=h truncate(guide.description, :length => 160) %>           
+             </div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+      
+  <hr>    
+  
+<br>
