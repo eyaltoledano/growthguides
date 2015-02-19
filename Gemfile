@@ -43,4 +43,7 @@ gem 'simple_form'
 gem 'devise'
 gem 'font-awesome-rails'
 
-gem 'pg', group: :production
+group :production, :staging do
+	gem 'pg'
+	gem 'rails_12factor'
+end
