@@ -43,3 +43,4 @@ gem 'simple_form'
 gem 'devise'
 gem 'font-awesome-rails'
 
+gem 'postgres', group: :production
