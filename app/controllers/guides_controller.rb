@@ -1,4 +1,5 @@
 class GuidesController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :edit, :update, :create, :destroy]
   before_action :set_guide, only: [:show, :edit, :update, :destroy]
 
   # GET /guides
@@ -24,7 +25,7 @@ class GuidesController < ApplicationController
   # POST /guides
   # POST /guides.json
   def create
-    @guide = Guide.new(guide_params)
+    @guide = current_user.guides.new(guide_params)
 
     respond_to do |format|
       if @guide.save
