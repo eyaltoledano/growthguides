@@ -6,11 +6,11 @@
 @import url('//fonts.googleapis.com/css?family=Antic+Slab');
 
 
-html,body {
+html,body#home-body  {
   height:100%;
 }
 
-body {
+body#home-body  {
   background: #2a88c5 url("http://zmwlt.com/bucket/cz-20150128-what-color-2-bg.jpg") center center / 70%;
   position: relative;
 }
@@ -63,7 +63,7 @@ svg{
   color: #ecf0f1
 }
 
-p {
+p#home-body  {
   color: #ecf0f1;
 }
 

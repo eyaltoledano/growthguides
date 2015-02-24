@@ -7,21 +7,21 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-2">
-      <div id="side-search">
+    <div class="well col-md-3">
+      <div id="side-search well">
         <div class="right-inner-addon">
           <i class="icon-search"></i>
-          <input type="search" class="form-control" placeholder="Search" />
+          <input type="search" class="form-control" placeholder="Search for a growth hack" />
           <br>
           <%= render 'menuleft' %>
         </div>
       </div>
     </div>
 
-    <div id="card_list" class="col-md-10">
+    <div id="card_list" class="col-md-9">
       <% @guides.each do |guide| %>
-      <div class="col-md-6">
-        <div class="card ">
+      <div class="results col-md-5">
+        <div class="card">
           <div class="card_left">
             <img src="http://www.growthgeeks.com/images/profile/0_CHQ4Y4mEatCMI0bD225IYsaLmKFzdJ9D8utbYUO4l91L9g3SaanqrRE98gboEOc3_Ik6lpu2ghF_" class="card_photo">
             <div class="card_price_title">$<%= guide.price / 100 %></div>
