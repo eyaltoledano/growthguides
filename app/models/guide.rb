@@ -17,5 +17,7 @@ class Guide < ActiveRecord::Base
 
 	belongs_to :user
 	belongs_to :category
+	has_attached_file :image
+	has_attached_file :resource
 	
 end

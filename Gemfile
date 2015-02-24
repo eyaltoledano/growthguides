@@ -43,6 +43,7 @@ gem 'simple_form'
 gem 'devise'
 gem 'font-awesome-rails'
 gem 'cancan'
+gem 'paperclip'
 
 group :production, :staging do
 	gem 'pg'
