@@ -44,6 +44,7 @@ gem 'devise'
 gem 'font-awesome-rails'
 gem 'cancan'
 gem 'paperclip'
+gem 'dotenv-rails', groups: :development
 
 group :production, :staging do
 	gem 'pg'
