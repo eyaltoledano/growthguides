@@ -9,7 +9,11 @@
                     <h4 class="text-center"><%= @guide.name %></h4>
                     <h5 class="text-center">Authored by <%= @guide.author %></h5>
                     <h5 class="text-center"><%= link_to "8 Reviews", "#", id: "reviews" %></h5>
-                                        <p><%= @guide.description %></p>
+                    
+                      <p class="lead">Description</p>
+                     <p><%= @guide.longdescription %></p>
+                    
+                    
                     
                     <br><br>
                     <div class="row" align="center">

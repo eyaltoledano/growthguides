@@ -73,6 +73,6 @@ class GuidesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def guide_params
-      params.require(:guide).permit(:name, :author, :description, :price, :availability)
+      params.require(:guide).permit(:name, :author, :description, :longdescription, :price, :availability)
     end
 end
