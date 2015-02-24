@@ -25,7 +25,7 @@
 
                       <div class="col-md-4"></div>
                       <div class="col-md-4">
-                        <% if @guide.availability = true %>
+                        <% if @guide.availability == true %>
                           <a id="cta" href="#" class="btn btn-success btn-block">Get Guide for 
                             <% if @guide.price > 1 %>
                               $<%= @guide.price / 100 %>
