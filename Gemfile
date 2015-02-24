@@ -42,6 +42,7 @@ gem 'twitter-bootstrap-rails'
 gem 'simple_form'
 gem 'devise'
 gem 'font-awesome-rails'
+gem 'cancan'
 
 group :production, :staging do
 	gem 'pg'

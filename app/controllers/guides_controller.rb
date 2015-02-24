@@ -20,6 +20,7 @@ class GuidesController < ApplicationController
 
   # GET /guides/1/edit
   def edit
+    authorize! :manage, @guide
   end
 
   # POST /guides
@@ -41,6 +42,7 @@ class GuidesController < ApplicationController
   # PATCH/PUT /guides/1
   # PATCH/PUT /guides/1.json
   def update
+    authorize! :manage, @guide
     respond_to do |format|
       if @guide.update(guide_params)
         format.html { redirect_to @guide, notice: 'Guide was successfully updated.' }
@@ -55,6 +57,7 @@ class GuidesController < ApplicationController
   # DELETE /guides/1
   # DELETE /guides/1.json
   def destroy
+    authorize! :manage, @guide
     @guide.destroy
     respond_to do |format|
       format.html { redirect_to guides_url, notice: 'Guide was successfully destroyed.' }
