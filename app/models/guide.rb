@@ -29,6 +29,6 @@ class Guide < ActiveRecord::Base
 	message: "Only PDFs allowed"
 	 
 	validates :image, attachment_presence: true
-	validates :resource, attachment_presence: true
+	# validates :resource, attachment_presence: true
 	
 end

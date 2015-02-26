@@ -3,14 +3,17 @@
 <head>
   <title>Hacker Guides | Buy and Sell Growth Hacks</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'sweet-alert' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'sweet-alert' %>
+  
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 <%= render "layouts/header" %>
 
-<div class="container">
+<div class="">
 	<% flash.each do |type, message| %>
 		<div class="alert alert-info fade-in">
 			<button class="close" data-dismiss="alert">x</button>

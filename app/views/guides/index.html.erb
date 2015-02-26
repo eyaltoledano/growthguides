@@ -1,56 +1,33 @@
-<div class="page-header" align="middle">
-  <%= link_to 'List a New Guide', new_guide_path, class: "pull-right btn btn-small btn-primary", id: "new-guide" %>
-  <h1 id="browse-header" class="text-center">Browse Growth Guides</h1>
-</div>
-
-<br>
-
 <div class="container">
-  <div class="row">
-    <div class="well col-md-3">
-      <div id="side-search well">
-        <div class="right-inner-addon">
-          <i class="icon-search"></i>
-          <input type="search" class="form-control" placeholder="Search for a growth hack" />
-          <br>
-          <%= render 'menuleft' %>
+  <div class="page-header" align="middle">
+    <%= link_to 'List a New Guide', new_guide_path, class: "pull-right btn btn-small btn-primary", id: "new-guide" %>
+    <h1 id="browse-header" class="text-center">Browse Growth Guides</h1>
+  </div>
+
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <div class="well col-md-3">
+        <div id="side-search well">
+          <div class="right-inner-addon">
+            <i class="icon-search"></i>
+            <input type="search" class="form-control" placeholder="Search for a growth hack" />
+            <br>
+            <%= render 'menuleft' %>
+          </div>
         </div>
+      </div>
+
+      <div id="card_list" class="col-md-9">
+        <%= render 'guide' %>
       </div>
     </div>
 
-    <div id="card_list" class="col-md-9">
-      <% @guides.each do |guide| %>
-      <% if guide.availability == true %>
-          <div class="results col-md-5">
-          <div class="card">
-            <div class="card_left">
-              <img src="http://www.growthgeeks.com/images/profile/0_CHQ4Y4mEatCMI0bD225IYsaLmKFzdJ9D8utbYUO4l91L9g3SaanqrRE98gboEOc3_Ik6lpu2ghF_" class="card_photo">
-              <div class="card_price_title">
-                <% if guide.price > 1 %>
-                  $<%= guide.price / 100 %>
-                <% else %>
-                  FREE
-                <% end %>
-              </div>
-              <div class="card_price_subtitle">Video</div>
-              <!--div class="card_price_title card_price_title_spacer">0</div>
-              <div class="card_price_subtitle">bought</div-->
-            </div>
-            <div class="card_right">
-              <span class="card_title"><%=h link_to truncate(guide.name, :length => 34), guide %></span><br>
-              <span class="card_subtitle"><%= link_to "3 User Reviews", "#", id:"reviews" %></span><br>
-              <div class="card_text">
-                <%=h truncate(guide.description, :length => 160) %>           
-               </div>
-            </div>
-          </div>
-        </div>
-        <% end %>
-      <% end %>
-    </div>
   </div>
+        
+    <hr>    
+    
+  <br>
 </div>
-      
-  <hr>    
-  
-<br>
+

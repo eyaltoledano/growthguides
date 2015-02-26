@@ -8,9 +8,9 @@
         <br>
         <%= f.input :longdescription, required: true, label: false, placeholder: "Growth Hack Long Description", input_html: { class: "form-control", rows: 5 } %>
         <br>
-        <%= f.input :price, required: true, label: false, placeholder: "Price your Growth Hack", input_html: { class: "form-control" } %>
-        <%= f.input :image %>
-        <%= f.input :resource %>
+        <%= f.input :price, required: true, label: false, placeholder: "Price your Hack (0 is Free)", input_html: { class: "form-control" } %>
+        <%= f.input :image, label: "Attach an Image to your Growth Hack" %>
+        <%= f.input :resource, label: "Attach a Video or PDF (MOV, FLV, PDF)", required: false %>
 
           <div class="checkbox text-center">
             <p>Make Hack Available Immediately?</p>

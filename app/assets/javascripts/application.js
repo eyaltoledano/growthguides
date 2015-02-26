@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require turbolinks
+//= require sweet-alert
+//= require sweet-alert-confirm
 //= require_tree .
 
 $(document).ready(function(){
@@ -27,5 +29,6 @@ $(document).ready(function(){
             $(this).toggleClass('open');       
         }
     );
+
 });
 

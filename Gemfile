@@ -46,6 +46,8 @@ gem 'cancan'
 gem 'paperclip'
 gem 'dotenv-rails', groups: :development
 gem 'aws-sdk', '< 2.0'
+gem 'sweet-alert'
+gem 'sweet-alert-confirm'
 
 group :production, :staging do
 	gem 'pg'

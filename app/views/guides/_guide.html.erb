@@ -1,0 +1,28 @@
+<% @guides.each do |guide| %>
+<% if guide.availability == true %>
+    <div class="results col-md-5">
+    <div class="panel panel-default card col-md-2 card-panel">
+      <div class="card_left">
+        <%= image_tag guide.image.url(:original), class: "card_photo img-responsive"  %>
+        <div class="card_price_title">
+          <% if guide.price > 1 %>
+            $<%= guide.price / 100 %>
+          <% else %>
+            FREE
+          <% end %>
+        </div>
+        <div class="card_price_subtitle">Video</div>
+        <!--div class="card_price_title card_price_title_spacer">0</div>
+        <div class="card_price_subtitle">bought</div-->
+        </div>
+      <div class="card_right">
+        <span class="card_title"><%=h link_to truncate(guide.name, :length => 60), guide %></span><br>
+        <span class="card_subtitle"><%= link_to "3 User Reviews", "#", id:"reviews" %></span><br>
+        <div class="card_text">
+          <%=h truncate(guide.description, :length => 160) %>           
+         </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+<% end %>
