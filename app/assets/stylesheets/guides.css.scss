@@ -353,8 +353,8 @@ div.box {
 }
 
 .bs-docs-header {
-	padding-top: 90px;
-	padding-bottom: 90px;
+	padding-top: 80px;
+	padding-bottom: 80px;
 	font-size: 24px;
 	text-align: left;
 	font-size: 20px;
@@ -368,6 +368,7 @@ div.box {
 	text-align: center;
 	text-shadow: 0 1px 0 rgba(0,0,0,.1);
 	background-color: #9b59b6;
+	background-image: #9b59b6 url('http://zmwlt.com/bucket/cz-20150128-what-color-2-bg.jpg') 0 0 no-repeat;
 	background-image: -webkit-gradient(linear,left top,left bottom,from(#9b59b6),to(#34495e));
 	background-image: -webkit-linear-gradient(top,#9b59b6 0,#34495e 100%);
 	background-image: -o-linear-gradient(top,#9b59b6 0,#34495e 100%);
@@ -479,4 +480,26 @@ p.label.label-default.label-empty {
 #author-content {
 	margin-top: 5px;
 	margin-bottom: 15px;
+}
+
+.progress {
+	background: #34495e; 
+	border: 1px solid #2c3e50; 
+	border-radius: 4px; height: 50px;
+}
+
+.progress-bar-custom {
+	background: rgba(142, 65, 201, 1);
+}
+
+#guideprogress {
+	margin-top: 11px;
+}
+
+#progressrow {
+	margin-top: 15px;
+}
+
+#progress-inner-text {
+	margin-top: 12px;
 }
