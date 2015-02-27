@@ -1,31 +1,33 @@
 
+  <div class="bs-docs-header" id="content">
+        <div class="container text-center">
+          <%= render 'showlinks' %> <br>
 
-<div class="bs-docs-header" id="content">
-      <div class="container text-center">
-        <%= render 'showlinks' %> <br>
+          <h1><%= @guide.name %></h1>
+          <p><%= @guide.description %></p>
+          
+          <br>
 
-        <h1><%= @guide.name %></h1>
-        <p><%= @guide.description %></p>
-        
-        <br>
-
-        <p class="label label-default label-empty"><strong>difficulty:</strong> beginner</p> 
-        <p class="label label-default"><strong>time:</strong> 4-6 hours</p>
-      </div>
-
-        <br>
-        
-      <div id="progressrow" class="row">
-        <%= render 'progressbar' %>
+          <p class="label label-default label-empty"><strong>difficulty:</strong> beginner</p> 
+          <p class="label label-default"><strong>time:</strong> 4-6 hours</p>
         </div>
-        
-        <div class="col-md-2"><%= render 'guidecta' %></div>
-      </div>
-</div>
+
+          <br>
+
+        <div id="progressrow" class="row">
+          <%= render 'progressbar' %>
+          </div>
+          
+          <div class="col-md-2"><%= render 'guidecta' %></div>
+        </div>
+  </div>
+
 
 <%= render 'guidelanding' %>
-
-
+<br>
+<%= render 'guidelanding' %>
+<br>
+<%= render 'guidelanding' %>
 
 
 
