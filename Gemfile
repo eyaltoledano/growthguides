@@ -50,6 +50,7 @@ gem 'aws-sdk', '< 2.0'
 gem 'sweet-alert'
 gem 'sweet-alert-confirm'
 gem 'friendly_id'
+gem 'stripe'
 
 group :production, :staging do
 	gem 'pg'
