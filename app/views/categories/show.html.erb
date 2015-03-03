@@ -1,0 +1,20 @@
+<div class="container text-center">
+
+	<p id="notice col-md-8"><%= notice %></p>
+
+	<p>
+	  <strong>Name:</strong>
+	  <%= @category.name %>
+	</p>
+
+	<p>
+	  <strong>Description:</strong>
+	  <%= @category.description %>
+	</p>
+
+
+
+	<%= link_to 'Edit', edit_category_path(@category), class: "btn btn-default" %> |
+	<%= link_to 'Back', categories_path, class: "btn btn-default" %>
+
+</div>
