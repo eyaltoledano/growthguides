@@ -66,15 +66,15 @@
 
 .nav-list > li > a > span {
   display: block;
-  font-weight: bold;
   text-transform: uppercase;
-  color: #34495e;
+  color: #9b59b6;
+  margin-top: 15px;
+  font-family: 'Antic Slab', serif;
+  font-weight: 800;
 }
 
 .nav-list > li > a > span:hover {
-  font-weight: bold;
   text-transform: uppercase;
-  color: #ecf0f1;
 }
 
 .mega-dropdown { position: static !important; }
@@ -103,7 +103,6 @@ a#brand:hover {
 
 #header-nav-right a:hover {
   color: #9b59b6;
-  font-weight: 600;
   border-bottom: 1px solid #8e44ad;
   padding-bottom: 15px;
 }
