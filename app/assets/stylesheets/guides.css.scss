@@ -21,6 +21,24 @@ html, body
 	border-radius: 4px;
 }
 
+#guide-bg-image {
+	z-index: -1;
+	height: 410px;
+	margin:-1px;
+   	padding:1px;
+   	filter: blur(5px);
+   -webkit-filter: blur(5px);
+   -moz-filter: blur(5px);
+   -o-filter: blur(5px);
+   -ms-filter: blur(5px);
+}
+
+#guide-bg-content {
+	z-index: 0;
+	margin-top: -337px;
+	overflow:hidden;
+}
+
 #difficulty-container {
 	width: 100%;
 }
@@ -375,18 +393,13 @@ div.box {
 	color: #cdbfe3;
 	text-align: center;
 	text-shadow: 0 1px 0 rgba(0,0,0,.1);
-	background-color: #9b59b6;
-	background-image: #9b59b6 url('http://zmwlt.com/bucket/cz-20150128-what-color-2-bg.jpg') 0 0 no-repeat;
-	background-image: -webkit-gradient(linear,left top,left bottom,from(#9b59b6),to(#34495e));
-	background-image: -webkit-linear-gradient(top,#9b59b6 0,#34495e 100%);
-	background-image: -o-linear-gradient(top,#9b59b6 0,#34495e 100%);
-	background-image: linear-gradient(to bottom,#9b59b6 0,#34495e 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9b59b6', endColorstr='#6F5499', GradientType=0);
+	background: 0 0 no-repeat;
 	background-repeat: repeat-x;
 }
 
 .bs-docs-header .container {
 	position: relative;
+	-webkit-filter: none;     
 }
 
 .container {
@@ -513,14 +526,4 @@ p.label.label-default.label-empty {
 	width: 80%;
 	font-size: 125%;
 	margin-left: 9%;
-}
-
-.guide-bg-image {
-	display: block;
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
-  left: 0;
-  position: fixed;
-  right: 0;
-  z-index: 1;
 }

@@ -1,4 +1,13 @@
 <div class="container">
+  <% if current_user %>
+
+  <div class="text-center">
+    <legend>Logged in as <%= current_user.email %> <%= link_to "Not you?", destroy_user_session_path, method: :delete %> </legend>
+  </div>
+
+  <% else %>
+  <% end %>
+
   <div class="page-header" align="middle">
     <%= link_to 'List a New Guide', new_guide_path, class: "pull-right btn btn-small btn-primary", id: "new-guide" %>
     <h1 id="browse-header" class="text-center">Browse Growth Guides</h1>

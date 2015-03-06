@@ -1,7 +1,8 @@
 
-  <div class="bs-docs-header" id="content">
-        <div class="guide-bg-image"></div>
-        <div class="container text-center">
+  <div class="bs-docs-header" id="guide-bg-image" style="background: url('<%= @guide.image.url(:original) %>');">
+  </div>
+
+  <div class="container text-center" id="guide-bg-content">
           <%= render 'showlinks' %> <br>
 
           <h1><%= @guide.name %></h1>
@@ -21,7 +22,6 @@
           
           <div class="col-md-2"><%= render 'guidecta' %></div>
         </div>
-  </div>
 
 
 <%= render 'guidelanding' %>

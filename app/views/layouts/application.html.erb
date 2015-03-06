@@ -6,8 +6,10 @@
   <%= stylesheet_link_tag    'sweet-alert' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'sweet-alert' %>
-  
+  <%= javascript_include_tag 'http://js.stripe.com/v1/', "application" %>
   <%= csrf_meta_tags %>
+  <%= tag :meta, :name => "stripe-key", :content => ENV['STRIPE_PUBLIC_KEY'] %>
+
 </head>
 <body>
 

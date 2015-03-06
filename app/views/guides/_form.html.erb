@@ -4,6 +4,12 @@
 
         <%= f.input :name, required: true, autofocus: true, label: false, placeholder: "Growth Hack Name", input_html: { class: "form-control" } %>
         <%= f.input :author, required: true, label: false, placeholder: "Growth Hack Author", input_html: {class: "form-control" } %>
+
+        <%= f.select_tag(:category_id, options_for_select([['Acquisition', '1'],
+                 ['Activation', '2'],['Retention','3'],['Referral','4'],['Revenue','5']], '5')) %>
+
+        <!-- :category_id, required: true, label: false, placeholder: "Category", input_html: { class: "form-control", rows: 5 } %>
+ -->
         <%= f.input :description, required: true, label: false, placeholder: "Growth Hack Short Description", input_html: { class: "form-control", rows: 5 }, :length => 140 %>
         <br>
         <%= f.input :longdescription, required: true, label: false, placeholder: "Growth Hack Long Description", input_html: { class: "form-control", rows: 5 } %>

@@ -1,11 +1,41 @@
-<% if @guide.availability == true %>
-  <a id="cta" href="#" class="btn btn-success btn-block">Get Guide for 
-    <% if @guide.price > 1 %>
-      $<%= @guide.price / 100 %>
-    <% else %>
-      FREE
-    <% end %>
-  </a>
-<% else %>
+
+<% if @guide.availability == true %> <!-- is guide available? -->
+
+	<% if current_user %> <!-- is user logged in? -->
+
+		<%= form_tag buy_path(slug: @guide.slug), method: :post, id: 'chargeForm' do %>
+		<script
+			src="https://checkout.stripe.com.checkout.js" 
+			class="stripe-button" 
+			data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+			data-amount="<%= @guide.price %>"
+			data-name="Hacker Guides"
+			data-image="<%= @guide.image.url(:original) %>"
+			data-description="<%= @guide.name %>"
+			data-email="<%= current_user.email %>"
+			id="chargeForm">
+		</script>
+
+
+		<%= hidden_field_tag 'stripeToken' %>
+		<%= hidden_field_tag 'stripeEmail' %>
+
+			<button id="cta" class="btn btn-success btn-block">			
+			    <% if @guide.price > 1 %>
+			      Get Guide for $<%= @guide.price / 100 %>
+			    <% else %> 
+			      Get Guide for FREE
+			    <% end %>
+		    </button>
+		<% end %>
+
+	<% else %> <!-- if user is not logged in -->
+	<%= link_to "Login to Access", new_user_session_path, id: "cta", class: "btn btn-primary btn-block" %>
+	<% end %>
+
+<% else %> <!-- if guide is not available -->
+
  <a id="cta" class="btn btn-danger btn-block" disabled="disabled">Guide Unavailable</a>
+
 <% end %>
+

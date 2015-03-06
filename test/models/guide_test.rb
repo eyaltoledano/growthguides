@@ -21,6 +21,7 @@
 #  resource_file_size    :integer
 #  resource_updated_at   :datetime
 #  category_id           :integer
+#  slug                  :string(255)
 #
 
 require 'test_helper'

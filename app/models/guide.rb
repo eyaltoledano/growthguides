@@ -21,12 +21,13 @@
 #  resource_file_size    :integer
 #  resource_updated_at   :datetime
 #  category_id           :integer
+#  slug                  :string(255)
 #
 
 class Guide < ActiveRecord::Base
 
 	extend FriendlyId
-	friendly_id :name, use: :slugged
+	friendly_id :name, use: [:slugged, :finders]
 
 	has_many :sales
 	belongs_to :category

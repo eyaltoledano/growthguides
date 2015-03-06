@@ -6,7 +6,7 @@ before_action :authenticate_user!, only: [:dashboard]
   	if current_user
   		redirect_to guides_path
   	end
-  	@guides = Guide.last(4)
+  	@guides = Guide.last(3)
   end
 
   def dashboard

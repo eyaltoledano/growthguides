@@ -21,6 +21,7 @@
 #  resource_file_size    :integer
 #  resource_updated_at   :datetime
 #  category_id           :integer
+#  slug                  :string(255)
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
